@@ -11,7 +11,7 @@
  */
 
 body {
-    padding-top: 60px;
+	min-width: 450px;
     background: #222;
     color: #fff;
 }

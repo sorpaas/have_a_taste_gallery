@@ -55,7 +55,7 @@ $(function () {
 
     $('#image-gallery-button').on('click', function (event) {
         event.preventDefault();
-        blueimp.Gallery($('#links a'), $('#blueimp-gallery').data());
+        blueimp.Gallery($('#links a'), $('#create_dialog').data());
     });
 
     $('#video-gallery-button').on('click', function (event) {
