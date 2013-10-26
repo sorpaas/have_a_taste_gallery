@@ -44,7 +44,12 @@ $(function () {
             baseUrl = 'http://farm' + photo.farm + '.static.flickr.com/' +
                 photo.server + '/' + photo.id + '_' + photo.secret;
             $('<a/>')
-                .append($('<img>').prop('src', baseUrl + '_s.jpg'))
+                .append(
+                  $('<img>').prop('src', baseUrl + '_s.jpg')
+                            .css('padding', '5px 10px 10px 10px')
+                            .css('width',  '180px')
+                            .css('height', '180px')
+                )
                 .prop('href', baseUrl + '_b.jpg')
                 .prop('title', photo.title)
                 .attr('data-gallery', '')
