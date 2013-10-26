@@ -15,6 +15,8 @@
 $(function () {
     'use strict';
 
+    $("#nextphoto").click(function(){console.log("OK")});
+
     // Load demo images from flickr:
     $.ajax({
         url: (window.location.protocol === 'https:' ?
@@ -42,6 +44,7 @@ $(function () {
                 .appendTo(linksContainer);
         });
     });
+
 
     $('#borderless-checkbox').on('change', function () {
         var borderless = $(this).is(':checked');
@@ -101,5 +104,7 @@ $(function () {
             }
         ], $('#blueimp-gallery').data());
     });
+
+
 
 });
