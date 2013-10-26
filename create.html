@@ -50,6 +50,10 @@
           <span class="input-group-addon" style="color:blue">Tags</span>
           <input type="text" class="form-control input-lg" placeholder="Social Innovation Camp">
         </div>
+		<br>
+		<img id="sa1" src="small1.jpg" height="75" width="75"></img>
+		<img id="sa2" src="small2.jpg" height="75" width="75"></img>
+		<img id="sa3" src="small3.jpg" height="75" width="75"></img>
   </div>
 </div>
 
@@ -74,8 +78,7 @@
 <script src="js/demo.js"></script>
 <script src="js/spin.js"></script>
 <script>
-function change_image(new_src) {
-	var image = $('#imp_img');
+function change_image(image, new_src) {
 	image.fadeOut('fast', function () {
     	image.attr('src', new_src);
     	image.fadeIn('fast');
@@ -115,13 +118,14 @@ function initialize_event() {
 		if(index == 0) {
 			spinner.stop();
 			//initialize_event();
-			change_image("example1.jpg");
+			change_image($('#imp_img'), "example1.jpg");
+			change_image($('#sa1'), "example1.jpg");
 			index++;
 			return;
 		}
 	
 		if(index == 1) {
-			change_image("blank.jpg");
+			change_image($('#imp_img'), "blank.jpg");
 			initialize_spinner();
 			index++;
 			return;
@@ -129,13 +133,14 @@ function initialize_event() {
 	
 		if(index == 2) {
 			spinner.stop();
-			change_image("example2.jpg");
+			change_image($('#imp_img'), "example2.jpg");
+			change_image($('#sa2'), "example2.jpg");
 			index++;
 			return;
 		}
 	
 		if(index == 3) {
-			change_image("blank.jpg");
+			change_image($('#imp_img'), "blank.jpg");
 			initialize_spinner();
 			index++;
 			return;
@@ -143,7 +148,8 @@ function initialize_event() {
 	
 		if(index == 4) {
 			spinner.stop();
-			change_image("example3.jpg");
+			change_image($('#imp_img'), "example3.jpg");
+			change_image($('#sa3'), "example3.jpg");
 			index++;
 			return;
 		}
