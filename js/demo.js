@@ -12,6 +12,13 @@
 /*jslint unparam: true */
 /*global window, document, blueimp, $ */
 
+function change_image(image, new_src) {
+	image.fadeOut('fast', function () {
+    	image.attr('src', new_src);
+    	image.fadeIn('fast');
+	});
+}
+
 $(function () {
     'use strict';
 
@@ -41,7 +48,54 @@ $(function () {
                 .prop('href', baseUrl + '_b.jpg')
                 .prop('title', photo.title)
                 .attr('data-gallery', '')
-                .appendTo(linksContainer);
+                .appendTo(linksContainer)
+				.click(function() {
+			        event.preventDefault();
+			        blueimp.Gallery($('#links a'), 
+				    {
+				        onopen: function () {
+				            // Callback function executed when the Gallery is initialized.
+				        },
+				        onopened: function () {
+							$('#b2').click(function(){
+								var x = $("img[title$='" + photo.title + "']");
+								change_image(x, 'example1.jpg')
+							});
+							$('#b3').click(function(){
+								var x = $("img[title$='" + photo.title + "']");
+								change_image(x, 'example2.jpg')
+							});
+							$('#b4').click(function(){
+								var x = $("img[title$='" + photo.title + "']");
+								change_image(x, 'example3.jpg')
+							});
+							$('#b5').click(function(){
+								var x = $("img[title$='" + photo.title + "']");
+								change_image(x, 'example1.jpg')
+							});
+							$('#b1').click(function(){
+								var x = $("img[title$='" + photo.title + "']");
+								change_image(x, 'example2.jpg')
+							});
+				        },
+				        onslide: function (index, slide) {
+				            // Callback function executed on slide change.
+				        },
+				        onslideend: function (index, slide) {
+				            // Callback function executed after the slide change transition.
+				        },
+				        onslidecomplete: function (index, slide) {
+				            // Callback function executed on slide content load.
+				        },
+				        onclose: function () {
+				            // Callback function executed when the Gallery is about to be closed.
+				        },
+				        onclosed: function () {
+				            // Callback function executed when the Gallery has been closed
+				            // and the closing transition has been completed.
+				        }
+				    });
+				});
         });
     });
 

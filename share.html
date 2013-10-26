@@ -25,11 +25,23 @@
 <link rel="stylesheet" href="css/bootstrap-image-gallery.css">
 <link rel="stylesheet" href="css/demo.css">
 </head>
-<body>
+<body style="min-width:400px">
+	<div class="navbar navbar-default navbar-static-top navbar-inverse">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button type="button" style="margin-right: 15px;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-fixed-top .navbar-collapse">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand" href="">Have A Taste</a>
+	        </div>
+	    </div>
+	</div>
 <div class="container">
   <div class="login">
-
-        <h1>Share to facebook </h1>
+        <h1>Share to Facebook</h1>
+		<div class="modal-body" style="max-width:100%; max-height:100%;"><img style="width:100%;height:100%" draggable="false" title="Rebellious" src="example1.jpg"></div>
         <div class="input-group input-group-sm">
           <span class="input-group-addon" style="color:blue">Facebook Description</span>
           <input type="text" class="form-control input-lg" placeholder="Love it!">
@@ -50,13 +62,22 @@
           <input type="text" class="form-control input-lg" placeholder="Corr website">
         </div>
         </br>
-
-        <button id="image-gallery-button2" type="button" class="btn btn-primary btn-lg">
-          Share to Facebook
-        </button>
   </div>
 </div>
 
+<div id='kit'>
+<div class="navbar navbar-default navbar-fixed-bottom navbar-inverse">
+    <div class="container">
+		<p></p>
+		<ul class="nav nav-pills" text-align="center">
+			<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+		  <li><a href="#">Home</a></li>
+		  <li class="active"><a id="image-gallery-button" href="index.html">Share</a></li>
+		  <li><a href="#">Search</a></li>
+		</ul>
+    </div>
+</div>
+</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
