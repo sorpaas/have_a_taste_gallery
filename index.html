@@ -69,24 +69,36 @@
                     <button type="button" class="close" aria-hidden="true">&times;</button>
                     <h4 class="modal-title"></h4>
                 </div>
-                <div class="modal-body next"></div>
+                <div class="modal-body"></div>
                 <div class="modal-footer">
-					<p><strong>Tags:</strong> #great #good #excellent </p>
+<<<<<<< HEAD
+					<div style="text-align: left; padding: 0px">
+						<p text-algin="left"><strong>Tags:</strong> <div class="editable">#great #good #excellent </div><br>
+						<strong>Description:</strong> <div class="editable">These are excellent photo series, just enjoy them! </div></p>
+					</div>
+                </div>
+=======
+					<p><strong>Tags:</strong> #sicamp #innovation #camp </p>
 					<p><strong>Description:</strong> These are excellent photo series, just enjoy them! </p>
+              <div class="btn-toolbar">
+                <div class="btn-group" style="float:right">
+                  <button type="button" class="btn btn-default next" id="nextphoto"><<</button>
+                  <button type="button" class="btn btn-default next">1</button>
+                  <button type="button" class="btn btn-default next">2</button>
+                  <button type="button" class="btn btn-default next">3</button>
+                  <button type="button" class="btn btn-default next">4</button>
+                  <button type="button" class="btn btn-default next">5</button>
+                  <button type="button" class="btn btn-default next">>></button>
+                </div>
+              </div>
+          </br>
 			        <div class="form-group">
-			            <button id="image-gallery-button2" type="button" class="btn btn-primary btn-lg">
-			                Details
+			            <button style="margin:0 auto" id="image-gallery-button2" type="button" class="btn btn-info btn-lg">
+                    <a href="share.html">Finish</a>
 			            </button>
 			        </div>
-                    <button type="button" class="btn btn-default pull-left prev">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                        Previous
-                    </button>
-                    <button type="button" class="btn btn-primary next">
-                        Next
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </button>
-                </div>
+            </div>
+>>>>>>> 765b32747d7348ab966fb74757c9173df52ab116
             </div>
         </div>
     </div>
@@ -108,16 +120,19 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"></h4>
+                    <h4 class="modal-title editable"></h4>
                 </div>
                 <div class="modal-body next"></div>
                 <div class="modal-footer">
 					<p>It works! </p>
+<<<<<<< HEAD
+=======
 			        <div class="form-group">
 			            <button id="image-gallery-button2" type="button" class="btn btn-primary btn-lg">
-			                Details
+                    <a href="share.html">Details</a>
 			            </button>
 			        </div>
+>>>>>>> 765b32747d7348ab966fb74757c9173df52ab116
                     <button type="button" class="btn btn-default pull-left prev">
                         <i class="glyphicon glyphicon-chevron-left"></i>
                         Previous
@@ -139,8 +154,8 @@
 		<ul class="nav nav-pills" text-align="center">
 			<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 		  <li><a href="#">Home</a></li>
-		  <li class="active"><a href="#">Create</a></li>
-		  <li><a href="#">Discovery</a></li>
+		  <li class="active"><a id="image-gallery-button" href="create.html">Create</a></li>
+		  <li><a href="#">Search</a></li>
 		</ul>
     </div>
 </div>
@@ -150,6 +165,7 @@
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 <script src="js/bootstrap-image-gallery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/demo.js"></script>
-</body> 
+</body>
 </html>

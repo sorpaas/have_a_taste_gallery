@@ -15,6 +15,8 @@
 $(function () {
     'use strict';
 
+    $("#nextphoto").click(function(){console.log("OK")});
+
     // Load demo images from flickr:
     $.ajax({
         url: (window.location.protocol === 'https:' ?
@@ -43,6 +45,7 @@ $(function () {
         });
     });
 
+
     $('#borderless-checkbox').on('change', function () {
         var borderless = $(this).is(':checked');
         $('#blueimp-gallery').data('useBootstrapModal', !borderless);
@@ -51,11 +54,6 @@ $(function () {
 
     $('#fullscreen-checkbox').on('change', function () {
         $('#blueimp-gallery').data('fullScreen', $(this).is(':checked'));
-    });
-
-    $('#image-gallery-button').on('click', function (event) {
-        event.preventDefault();
-        blueimp.Gallery($('#links a'), $('#create_dialog').data());
     });
 
     $('#video-gallery-button').on('click', function (event) {
@@ -101,5 +99,7 @@ $(function () {
             }
         ], $('#blueimp-gallery').data());
     });
+
+
 
 });
