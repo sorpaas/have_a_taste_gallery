@@ -40,16 +40,24 @@ $(function () {
         var linksContainer = $('#links'),
             baseUrl;
         // Add the demo images as links with thumbnails to the page:
-		var si_camp_title = "Social Innovation Camp"
-        $('<div/>')
+		var array = [
+		{name: "Social Innovation Camp", img: "index.jpg"},
+		{name: "Organic Framing", img: "index2.jpg"},
+		{name: "Voluntary Teaching", img: "index3.jpg"},
+		{name: "Recycle Workshop", img: "index4.jpg"},
+		{name: "Social Innovation Camp", img: "index.jpg"},
+		{name: "Social Innovation Camp", img: "index.jpg"}]
+		for(var i = 0; i < array.length; i++) {
+			var si_camp_title = array[i].name;
+        $('<a/>')
             .append(
-              $('<img>').prop('src', 'index.jpg')
+              $('<img>').prop('src', array[i].img)
                         .css('padding', '5px 10px 10px 10px')
                         .css('width',  '180px')
                         .css('height', '180px')
             )
             .prop('href', 'example1.jpg')
-            .prop('title', si_camp_title)
+            .prop('title', array[i].name)
             .attr('data-gallery', '')
             .appendTo(linksContainer)
 			.click(function() {
@@ -99,6 +107,7 @@ $(function () {
 			        }
 			    });
 			});
+		}
         $.each(result.photos.photo, function (index, photo) {
             baseUrl = 'http://farm' + photo.farm + '.static.flickr.com/' +
                 photo.server + '/' + photo.id + '_' + photo.secret;
