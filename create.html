@@ -45,7 +45,7 @@
           <span class="input-group-addon" style="color:blue">Event Name</span>
           <input id="event-name" type="text" class="form-control input-lg" placeholder="SI Camp">
         </div>
-		<div id="imp_div" class="modal-body" style="max-width:100%; max-height:100%;"><img id="imp_img" style="width:100%;height:100%" draggable="false" title="Rebellious" src="blank.jpg"></div>
+		<div id="imp_div" class="modal-body" style="max-width:100%; max-height:100%;"><img id="imp_img" style="width:100%;height:100%" draggable="false" title="Rebellious" src="blank.png"></div>
         <div class="input-group input-group-sm">
           <span class="input-group-addon" style="color:blue">Tags</span>
           <input id="tags" type="text" class="form-control input-lg" placeholder="#sicamp">
@@ -107,7 +107,7 @@ function initialize_spinner() {
 		hwaccel: false, // Whether to use hardware acceleration
 		className: 'spinner', // The CSS class to assign to the spinner
 		zIndex: 2e9, // The z-index (defaults to 2000000000)
-		top: 'auto', // Top position relative to parent in px
+		top: 52, // Top position relative to parent in px
 		left: 'auto' // Left position relative to parent in px
 	};
 	var target = $('#imp_div')[0];
@@ -129,7 +129,7 @@ function initialize_event() {
 		}
 
 		if(index == 1) {
-			change_image($('#imp_img'), "blank.jpg");
+			change_image($('#imp_img'), "blank.png");
 			change_description('', '')
 			initialize_spinner();
 			index++;
@@ -146,7 +146,7 @@ function initialize_event() {
 		}
 
 		if(index == 3) {
-			change_image($('#imp_img'), "blank.jpg");
+			change_image($('#imp_img'), "blank.png");
 			change_description('', '')
 			initialize_spinner();
 			index++;

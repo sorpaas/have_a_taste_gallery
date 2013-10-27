@@ -41,7 +41,7 @@ $(function () {
             baseUrl;
         // Add the demo images as links with thumbnails to the page:
 		var si_camp_title = "Social Innovation Camp"
-        $('<a/>')
+        $('<div/>')
             .append(
               $('<img>').prop('src', 'index.jpg')
                         .css('padding', '5px 10px 10px 10px')
