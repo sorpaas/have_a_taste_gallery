@@ -43,12 +43,12 @@
         <h1>Create Experience</h1>
         <div class="input-group input-group-sm">
           <span class="input-group-addon" style="color:blue">Event Name</span>
-          <input type="text" class="form-control input-lg" placeholder="Love it!">
+          <input id="event-name" type="text" class="form-control input-lg" placeholder="SI Camp">
         </div>
 		<div id="imp_div" class="modal-body" style="max-width:100%; max-height:100%;"><img id="imp_img" style="width:100%;height:100%" draggable="false" title="Rebellious" src="blank.jpg"></div>
         <div class="input-group input-group-sm">
           <span class="input-group-addon" style="color:blue">Tags</span>
-          <input type="text" class="form-control input-lg" placeholder="Social Innovation Camp">
+          <input id="tags" type="text" class="form-control input-lg" placeholder="#sicamp">
         </div>
 		<br>
 		<img id="sa1" src="small1.jpg" height="75" width="75"></img>
@@ -83,6 +83,11 @@ function change_image(image, new_src) {
     	image.attr('src', new_src);
     	image.fadeIn('fast');
 	});
+}
+
+function change_description(name, tags) {
+	$('#event-name').attr('value', name);
+	$('#tags').attr('value', tags);
 }
 
 var index = 0;
@@ -120,12 +125,14 @@ function initialize_event() {
 			//initialize_event();
 			change_image($('#imp_img'), "example1.jpg");
 			change_image($('#sa1'), "example1.jpg");
+			change_description('SI Camp Friday --- Camp Start', '#sicamp #friday #start')
 			index++;
 			return;
 		}
 	
 		if(index == 1) {
 			change_image($('#imp_img'), "blank.jpg");
+			change_description('', '')
 			initialize_spinner();
 			index++;
 			return;
@@ -135,12 +142,14 @@ function initialize_event() {
 			spinner.stop();
 			change_image($('#imp_img'), "example2.jpg");
 			change_image($('#sa2'), "example2.jpg");
+			change_description('SI Camp Saturday --- Camp Running Day 1', '#sicamp #saturday #running')
 			index++;
 			return;
 		}
 	
 		if(index == 3) {
 			change_image($('#imp_img'), "blank.jpg");
+			change_description('', '')
 			initialize_spinner();
 			index++;
 			return;
@@ -150,6 +159,7 @@ function initialize_event() {
 			spinner.stop();
 			change_image($('#imp_img'), "example3.jpg");
 			change_image($('#sa3'), "example3.jpg");
+			change_description('SI Camp Sunday --- Camp Running Day 2', '#sicamp #sunday #running')
 			index++;
 			return;
 		}

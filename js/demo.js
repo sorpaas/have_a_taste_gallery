@@ -40,6 +40,65 @@ $(function () {
         var linksContainer = $('#links'),
             baseUrl;
         // Add the demo images as links with thumbnails to the page:
+		var si_camp_title = "Social Innovation Camp"
+        $('<a/>')
+            .append(
+              $('<img>').prop('src', 'index.jpg')
+                        .css('padding', '5px 10px 10px 10px')
+                        .css('width',  '180px')
+                        .css('height', '180px')
+            )
+            .prop('href', 'example1.jpg')
+            .prop('title', si_camp_title)
+            .attr('data-gallery', '')
+            .appendTo(linksContainer)
+			.click(function() {
+		        event.preventDefault();
+		        blueimp.Gallery($('#links a'), 
+			    {
+			        onopen: function () {
+			            // Callback function executed when the Gallery is initialized.
+			        },
+			        onopened: function () {
+						$('#b2').click(function(){
+							var x = $("img[title$='"+si_camp_title+"']");
+							change_image(x, 'example2.jpg')
+						});
+						$('#b3').click(function(){
+							var x = $("img[title$='"+si_camp_title+"']");
+							change_image(x, 'example3.jpg')
+						});
+						$('#b4').click(function(){
+							var x = $("img[title$='"+si_camp_title+"']");
+							change_image(x, 'example4.jpg')
+						});
+						$('#b5').click(function(){
+							var x = $("img[title$='"+si_camp_title+"']");
+							change_image(x, 'example5.jpg')
+						});
+						$('#b1').click(function(){
+							var x = $("img[title$='"+si_camp_title+"']");
+							change_image(x, 'example1.jpg')
+						});
+			        },
+			        onslide: function (index, slide) {
+			            // Callback function executed on slide change.
+			        },
+			        onslideend: function (index, slide) {
+			            // Callback function executed after the slide change transition.
+			        },
+			        onslidecomplete: function (index, slide) {
+			            // Callback function executed on slide content load.
+			        },
+			        onclose: function () {
+			            // Callback function executed when the Gallery is about to be closed.
+			        },
+			        onclosed: function () {
+			            // Callback function executed when the Gallery has been closed
+			            // and the closing transition has been completed.
+			        }
+			    });
+			});
         $.each(result.photos.photo, function (index, photo) {
             baseUrl = 'http://farm' + photo.farm + '.static.flickr.com/' +
                 photo.server + '/' + photo.id + '_' + photo.secret;
